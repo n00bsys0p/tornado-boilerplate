@@ -63,7 +63,7 @@ if settings['debug']:
     LOG_LEVEL = logging.DEBUG
 else:
     LOG_LEVEL = logging.INFO
-USE_SYSLOG = DEPLOYMENT != DeploymentType.SOLO
+USE_SYSLOG = DEPLOYMENT != DeploymentType.DEV
 
 logconfig.initialize_logging(SYSLOG_TAG, SYSLOG_FACILITY, LOGGERS,
         LOG_LEVEL, USE_SYSLOG)
